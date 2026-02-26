@@ -1,0 +1,116 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>© {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+        <p>GitHub 협업 전략 및 개발 관련 생각들을 공유하는 공간입니다.</p>
+      </div>
+      
+      <div class="footer-links">
+        <a href="{{ "/" | relative_url }}">홈</a>
+        <span class="footer-separator">·</span>
+        <a href="{{ "/about/" | relative_url }}">소개</a>
+        <span class="footer-separator">·</span>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        <span class="footer-separator">·</span>
+        <a href="{{ "/feed.xml" | relative_url }}">RSS 피드</a>
+      </div>
+      
+      <div class="footer-legal">
+        <p>이 사이트는 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>로 만들어졌으며, 
+           <a href="https://github.com/waylake/waylake.github.io" target="_blank" rel="noopener">오픈 소스</a>입니다.</p>
+        <p><a href="{{ "/sitemap.xml" | relative_url }}">사이트맵</a> | 
+           <a href="{{ "/privacy/" | relative_url }}">개인정보 처리방침</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  }
+  
+  .footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .footer-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-info p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+  
+  .footer-separator {
+    opacity: 0.6;
+    margin: 0 0.5rem;
+  }
+  
+  .footer-legal {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
+  .footer-legal a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .footer-legal a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-legal p {
+    margin: 0.3rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-separator {
+      display: none;
+    }
+  }
+  
+  @media print {
+    .site-footer {
+      page-break-inside: avoid;
+      margin-top: 1rem;
+      padding: 0.5rem 0;
+    }
+  }
+</style>

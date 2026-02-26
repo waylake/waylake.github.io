@@ -1,0 +1,281 @@
+:root {
+  /* Base colors - Light theme defaults */
+  --primary-color: #4078c0;
+  --secondary-color: #6a737d;
+  --background-color: #ffffff;
+  --text-color: #24292e;
+  --heading-color: #1b1f23;
+  --border-color: #d1d5da;
+  --code-bg: #f6f8fa;
+  --code-text: #d73a49;
+  --link-color: #0366d6;
+  --link-hover: #0056b3;
+  
+  /* Header specific */
+  --header-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --header-text: #ffffff;
+  
+  /* Theme toggle button - Light theme */
+  --theme-toggle-bg: #f6f8fa;
+  --theme-toggle-text: #24292e;
+  --light-theme-toggle-bg: #f6f8fa;
+  --light-theme-toggle-text: #24292e;
+  --dark-theme-toggle-bg: #21262d;
+  --dark-theme-toggle-text: #f0f6fc;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --padding: 1rem;
+  --border-radius: 6px;
+  --box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --transition: all 0.2s ease;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --primary-color: #58a6ff;
+  --secondary-color: #8b949e;
+  --background-color: #0d1117;
+  --text-color: #e6edf3;
+  --heading-color: #f0f6fc;
+  --border-color: #30363d;
+  --code-bg: #161b22;
+  --code-text: #ff7b72;
+  --link-color: #79c0ff;
+  --link-hover: #58a6ff;
+  
+  /* Header specific */
+  --header-bg: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  --header-text: #f0f6fc;
+}
+
+/* Base styles using CSS variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Header styles using variables */
+.site-header {
+  background: var(--header-bg) !important;
+  color: var(--header-text) !important;
+}
+
+.page-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.page-link:hover {
+  color: var(--header-text) !important;
+}
+
+.page-link::after {
+  background-color: var(--primary-color) !important;
+}
+
+/* Content styles */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding);
+  min-height: calc(100vh - 200px);
+}
+
+.post-content {
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  color: var(--heading-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.post-content a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.post-content pre {
+  background: var(--code-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.post-content code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* Blockquote styles */
+.post-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* Table styles */
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.post-content th {
+  background: var(--code-bg);
+  color: var(--heading-color);
+}
+
+/* List styles */
+.post-content ul,
+.post-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin: 0.5rem 0;
+}
+
+/* Horizontal rule */
+.post-content hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 2rem 0;
+}
+
+/* Footer styles */
+.site-footer {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .post-content {
+    padding: 1rem;
+  }
+  
+  .main-content {
+    padding: 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .post-content {
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  .theme-toggle-container {
+    display: none !important;
+  }
+}
+
+/* Syntax highlighting for dark theme */
+[data-theme="dark"] .highlighter-rouge {
+  background: var(--code-bg) !important;
+}
+
+[data-theme="dark"] .highlighter-rouge .rouge-comment {
+  color: #8b949e !important;
+}
+
+[data-theme="dark"] .highlighter-rouge .rouge-keyword {
+  color: #ff7b72 !important;
+}
+
+[data-theme="dark"] .highlighter-rouge .rouge-string {
+  color: #a5d6ff !important;
+}
+
+[data-theme="dark"] .highlighter-rouge .rouge-number {
+  color: #79c0ff !important;
+}
+
+/* Smooth theme transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--code-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link-hover);
+}
+
+/* Selection color */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}

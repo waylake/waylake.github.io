@@ -5,6 +5,7 @@ title: Waylake's Thinking
 
 # 최근 글
 
+<div class="post-grid">
 {% for post in site.posts %}
 <article class="post-item">
   <h2 class="post-item-title">
@@ -15,21 +16,31 @@ title: Waylake's Thinking
   </div>
 </article>
 {% endfor %}
+</div>
 
 <style>
-  .post-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .post-item:first-child {
-    border-top: 1px solid var(--border);
+  .post-item {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .post-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .post-item-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.4;
   }
 
   .post-item-title a {
@@ -44,5 +55,11 @@ title: Waylake's Thinking
   .post-item-meta {
     font-size: 0.85rem;
     color: var(--muted);
+  }
+
+  @media (max-width: 768px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

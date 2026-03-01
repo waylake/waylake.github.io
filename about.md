@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-# About Waylake's Thinking
+# About Way Log
 
 ## 블로그 소개
 
-**Waylake's Thinking**은 GitHub을 활용한 효율적인 팀 협업 방법과 개발 프로세스 개선에 대한 생각과 경험을 공유하는 공간입니다. 실제 프로젝트에서 발생하는 문제들과 그 해결 전략들을 기록하고 있습니다.
+**Way Log**은 GitHub을 활용한 효율적인 팀 협업 방법과 개발 프로세스 개선에 대한 생각과 경험을 공유하는 공간입니다. 실제 프로젝트에서 발생하는 문제들과 그 해결 전략들을 기록하고 있습니다.
 
 ## 블로그 주제
 
@@ -96,6 +96,6 @@ permalink: /about/
 
 ---
 
-© 2026 Waylake. All rights reserved.
+© 2026 Way Log. All rights reserved.
 
 *마지막 업데이트: 2026년 2월 26일*

@@ -1,4 +1,4 @@
-# Waylake's Thinking - Jekyll 블로그
+# Way Log - Jekyll 블로그
 
 GitHub 협업 전략 및 개발 관련 생각들을 공유하는 Jekyll 기반 블로그입니다.
 
@@ -135,4 +135,4 @@ brew upgrade ruby
 
 ---
 
-© 2026 Waylake. All rights reserved.
+© 2026 Way Log. All rights reserved.

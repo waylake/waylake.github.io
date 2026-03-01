@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Waylake's Thinking
+title: Way Log
 ---
 
 # 최근 글

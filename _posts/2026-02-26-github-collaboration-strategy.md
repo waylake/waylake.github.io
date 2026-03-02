@@ -2,13 +2,11 @@
 layout: post
 title:  "GitHub 협업 문제 정의 및 해결 전략 (gh CLI 버전)"
 date:   2026-02-26 00:00:00 +0900
-categories: github collaboration
+categories: psychology
 author: waylake
-tags: [github, collaboration, gh-cli, workflow]
+tags: [github, collaboration, gh-cli, workflow, psychology]
 lang: ko
 ---
-
-# GitHub 협업 문제 정의 및 해결 전략 (gh CLI 버전)
 
 ## 문제 정의
 현재 팀에서 발생하는 GitHub 협업 문제:
@@ -119,7 +117,3 @@ gh pr list --state merged --limit 10
 - [gh pr 명령어](https://cli.github.com/manual/gh_pr)
 - [브랜치 보호 API](https://docs.github.com/en/rest/branches/branch-protection)
 
----
-*작성일시: 2026-02-26*
-*작성자: [waylake]*
-*gh CLI 버전: 2.42.0*

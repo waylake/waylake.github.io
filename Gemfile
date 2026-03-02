@@ -8,10 +8,11 @@ gem "jekyll-sitemap", "~> 1.4"
 
 # Theme
 gem "minima", "~> 2.5"
+gem "jekyll-theme-cayman"
 
 # For local development
 group :development do
-  gem "webrick", "~> 1.7"
+  gem "webrick"
 end
 
 # Korean language support

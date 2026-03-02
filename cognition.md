@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cognitive Science
+title: 認知科學
 permalink: /cognition/
 ---
 
@@ -15,31 +15,39 @@ permalink: /cognition/
 
 <style>
   .post-list {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .post-link {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 0.4rem 0;
+    padding: 1rem 0;
     text-decoration: none;
     color: var(--text);
     border-bottom: 1px solid var(--border);
+    transition: border-color 0.3s ease;
   }
 
-  .post-link:hover .post-title {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  .post-link:hover {
+    border-color: var(--muted);
+  }
+
+  .post-link:first-child {
+    border-top: 1px solid var(--border);
   }
 
   .post-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
   }
 
   .post-date {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--muted);
     font-weight: 300;
     white-space: nowrap;

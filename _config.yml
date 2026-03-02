@@ -27,7 +27,6 @@ twitter_username: waylake
 github_username: waylake
 
 # Build settings
-theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -50,34 +49,3 @@ exclude:
 lang: en
 encoding: utf-8
 timezone: UTC
-
-# Collections
-collections:
-  areas:
-    output: true
-    permalink: /areas/:path/
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "waylake"
-  -
-    scope:
-      path: ""
-      type: "areas"
-    values:
-      layout: "page"
-      author: "waylake"
-
-# Minima theme settings
-minima:
-  skin: dark
-  date_format: "%Y-%m-%d"
-  social_links:
-    - { platform: github, user_url: "https://github.com/waylake" }
-    - { platform: twitter, user_url: "https://twitter.com/waylake" }

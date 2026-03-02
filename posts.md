@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 모든 글
+title: All Posts
 permalink: /posts/
 ---
 
-# 모든 글
+# All Posts
 
 {% for post in site.posts %}
 <article class="post-summary">
@@ -13,7 +13,7 @@ permalink: /posts/
   </h2>
 
   <div class="post-summary-meta">
-    <span class="post-summary-date">{{ post.date | date: "%Y년 %m월 %d일" }}</span>
+    <span class="post-summary-date">{{ post.date | date: "%Y-%m-%d" }}</span>
     {% if post.author %}
       <span class="post-summary-author">• {{ post.author }}</span>
     {% endif %}

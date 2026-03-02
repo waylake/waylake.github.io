@@ -2,7 +2,7 @@
 layout: post
 title:  "Garbage In, Garbage Out: The Degradation of Human Requirements in the LLM Era"
 date:   2026-02-28 00:00:00 +0900
-categories: essay
+categories: cognition
 author: waylake
 tags: [llm, ai, essay]
 lang: ko

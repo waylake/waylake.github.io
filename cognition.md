@@ -6,62 +6,43 @@ permalink: /cognition/
 
 <div class="post-list">
 {% for post in site.categories.cognition %}
-<article class="post-item">
-  <h2 class="post-item-title">
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </h2>
-  <div class="post-item-meta">
-    <span class="post-item-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-  </div>
-  <div class="post-item-excerpt">
-    {{ post.excerpt }}
-  </div>
-</article>
+<a href="{{ post.url | relative_url }}" class="post-link">
+  <span class="post-title">{{ post.title }}</span>
+  <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+</a>
 {% endfor %}
 </div>
 
 <style>
   .post-list {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
-  .post-item {
-    padding: 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    transition: box-shadow 0.2s ease;
-  }
-
-  .post-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .post-item-title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.4;
-  }
-
-  .post-item-title a {
-    color: var(--text);
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.4rem 0;
     text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
   }
 
-  .post-item-title a:hover {
+  .post-link:hover .post-title {
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
-  .post-item-meta {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 0.75rem;
+  .post-title {
+    font-size: 0.95rem;
+    font-weight: 400;
   }
 
-  .post-item-excerpt {
+  .post-date {
+    font-size: 0.8rem;
     color: var(--muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-weight: 300;
+    white-space: nowrap;
+    margin-left: 1rem;
   }
 </style>

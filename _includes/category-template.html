@@ -1,0 +1,35 @@
+<div class="category-hero" id="category-hero-{{ include.title | slugify }}">
+  <div class="category-title">{{ include.title }}</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = document.createElement('img');
+          img.src = '{{ include.image_path | relative_url }}';
+          img.alt = '{{ include.title }}';
+          img.className = 'category-bg';
+          img.loading = 'lazy';
+          entry.target.prepend(img);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const hero = document.getElementById('category-hero-{{ include.title | slugify }}');
+    if (hero) observer.observe(hero);
+  });
+</script>
+
+<div class="post-list">
+{% for post in include.posts %}
+<a href="{{ post.url | relative_url }}" class="post-link">
+  <span class="post-title">{{ post.title }}</span>
+  <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+</a>
+{% endfor %}
+</div>
+
+{% include category-style.html %}

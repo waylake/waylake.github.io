@@ -1,4 +1,4 @@
-![Seijaku](./assets/images/landing-bg.jpg)
+![Seijaku](./assets/images/landing-bg.webp)
 
 # 思惟を梳く空間
 

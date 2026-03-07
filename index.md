@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Way Log
+title: 道淵
 ---
 
 {% include index-template.html

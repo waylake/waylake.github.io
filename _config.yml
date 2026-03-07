@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 道淵 Way Log
+title: 道淵
 description: GitHub 협업 전략 및 개발 관련 생각 정리
 description_ko: GitHub 협업 문제 해결 및 개발 워크플로우 최적화에 대한 생각과 전략을 공유합니다.
 baseurl: ""

@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Way Log
-description: GitHub collaboration strategies and development-related thoughts
+title: Waylake's Thinking
+description: GitHub 협업 전략 및 개발 관련 생각 정리
 description_ko: GitHub 협업 문제 해결 및 개발 워크플로우 최적화에 대한 생각과 전략을 공유합니다.
 baseurl: ""
 url: "https://waylake.github.io"
@@ -27,6 +27,7 @@ twitter_username: waylake
 github_username: waylake
 
 # Build settings
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -40,17 +41,41 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - package.json
-  - package-lock.json
-  - .markdownlint.jsonc
-  - .prettierrc
-  - .prettierignore
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
 
-# English language support
-lang: en
+# Korean language support
+lang: ko
 encoding: utf-8
-timezone: UTC
+timezone: Asia/Seoul
+
+# Collections
+collections:
+  areas:
+    output: true
+    permalink: /areas/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "waylake"
+  - scope:
+      path: ""
+      type: "areas"
+    values:
+      layout: "page"
+      author: "waylake"
+
+# Minima theme settings
+minima:
+  skin: dark
+  date_format: "%Y년 %m월 %d일"
+  social_links:
+    - { platform: github, user_url: "https://github.com/waylake" }
+    - { platform: twitter, user_url: "https://twitter.com/waylake" }

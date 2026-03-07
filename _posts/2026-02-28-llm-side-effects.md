@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Garbage In, Garbage Out: The Degradation of Human Requirements in the LLM Era"
-date:   2026-02-28 00:00:00 +0900
+title: "Garbage In, Garbage Out: The Degradation of Human Requirements in the LLM Era"
+date: 2026-02-28 00:00:00 +0900
 categories: cognition
 author: waylake
 tags: [llm, ai, essay]
 lang: ko
 ---
-
 
 The LLM Paradox: We’re Forgetting How to Speak to Humans
 The longer we use LLM services, the more I see a specific kind of "psychosis" spreading in the workplace. LLMs are so good at hallucinating a coherent answer from a vague prompt that people have started to believe their vague prompts were actually coherent.

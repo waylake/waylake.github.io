@@ -15,10 +15,10 @@ keywords:
   - 인과율
 ---
 
-{% include subcategory-header.html 
-  title=page.title 
-  description=page.description 
-  color=page.color 
+{% include subcategory-header.html
+  title=page.title
+  description=page.description
+  color=page.color
   type=page.type
   keywords=page.keywords %}
 

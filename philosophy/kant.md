@@ -11,10 +11,10 @@ philosophers:
   - 칸트
 ---
 
-{% include subcategory-header.html 
-  title=page.title 
-  description=page.description 
-  color=page.color 
+{% include subcategory-header.html
+  title=page.title
+  description=page.description
+  color=page.color
   type=page.type %}
 
 <div class="philosophers-section">

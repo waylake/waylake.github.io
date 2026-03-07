@@ -1,20 +1,15 @@
 <div class="subcategory-header">
   <div class="subcategory-meta">
     <div class="subcategory-icon" style="background: {{ include.color }}">
-      {% if include.type == "core_field" %}
-      📚
-      {% elsif include.type == "modern" %}
-      🕰️
-      {% else %}
-      🔮
-      {% endif %}
+      {% if include.type == "core_field" %} 📚 {% elsif include.type == "modern"
+      %} 🕰️ {% else %} 🔮 {% endif %}
     </div>
     <div>
       <h1 class="subcategory-title">{{ include.title }}</h1>
       <p class="subcategory-description">{{ include.description }}</p>
     </div>
   </div>
-  
+
   {% if include.keywords %}
   <div class="subcategory-keywords">
     {% for keyword in include.keywords %}
@@ -25,77 +20,77 @@
 </div>
 
 <style>
-.subcategory-header {
-  margin-bottom: 50px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--border-color, #e5e7eb);
-}
+  .subcategory-header {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+  }
 
-.subcategory-meta {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.subcategory-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  flex-shrink: 0;
-}
-
-.subcategory-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--text-primary, #111);
-  margin: 0 0 10px 0;
-}
-
-.subcategory-description {
-  font-size: 1.05rem;
-  color: var(--text-secondary, #666);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.subcategory-keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.keyword-badge {
-  background: var(--bg-secondary, #e5e7eb);
-  color: var(--text-secondary, #666);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
   .subcategory-meta {
-    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .subcategory-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
     align-items: center;
-    text-align: center;
-  }
-  
-  .subcategory-title {
+    justify-content: center;
     font-size: 1.8rem;
+    flex-shrink: 0;
   }
-}
 
-[data-theme="dark"] .subcategory-title {
-  color: var(--text-primary, #f9fafb);
-}
+  .subcategory-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary, #111);
+    margin: 0 0 10px 0;
+  }
 
-[data-theme="dark"] .keyword-badge {
-  background: var(--bg-secondary, #374151);
-  color: var(--text-secondary, #9ca3af);
-}
+  .subcategory-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary, #666);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .subcategory-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .keyword-badge {
+    background: var(--bg-secondary, #e5e7eb);
+    color: var(--text-secondary, #666);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .subcategory-meta {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .subcategory-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  [data-theme="dark"] .subcategory-title {
+    color: var(--text-primary, #f9fafb);
+  }
+
+  [data-theme="dark"] .keyword-badge {
+    background: var(--bg-secondary, #374151);
+    color: var(--text-secondary, #9ca3af);
+  }
 </style>

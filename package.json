@@ -4,6 +4,7 @@
   "description": "Way Log - cognitive science, psychology, philosophy",
   "private": true,
   "scripts": {
+    "dev": "bundle exec jekyll serve --livereload",
     "build": "bundle exec jekyll build",
     "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules' '#_site' '#vendor' '#.notes' '#AGENTS.md'",
     "lint:format": "prettier --check '**/*.{md,html,css,yml,yaml,json}'",

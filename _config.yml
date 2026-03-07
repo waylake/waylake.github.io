@@ -27,7 +27,6 @@ twitter_username: waylake
 github_username: waylake
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -71,11 +70,3 @@ defaults:
     values:
       layout: "page"
       author: "waylake"
-
-# Minima theme settings
-minima:
-  skin: dark
-  date_format: "%Y년 %m월 %d일"
-  social_links:
-    - { platform: github, user_url: "https://github.com/waylake" }
-    - { platform: twitter, user_url: "https://twitter.com/waylake" }

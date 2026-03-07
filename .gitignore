@@ -6,3 +6,4 @@ vendor
 AGENTS.md
 .notes
 *.DS_Store
+node_modules

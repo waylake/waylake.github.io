@@ -40,6 +40,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
+  - package.json
+  - package-lock.json
+  - .markdownlint.jsonc
+  - .prettierrc
+  - .prettierignore
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

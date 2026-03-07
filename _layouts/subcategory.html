@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko' }}" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="main-content">
+    <article class="page-content">
+      <div class="page-body">
+        <div class="philosophy-container">
+          <div class="subcategory-breadcrumb">
+            <a href="{{ '/philosophy' | relative_url }}">哲學</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">{{ page.title }}</span>
+          </div>
+          
+          {{ content }}
+        </div>
+      </div>
+    </article>
+  </main>
+
+  {% include footer.html %}
+  {% include theme-toggle.html %}
+  {% include category-style.html %}
+  
+  <style>
+  .subcategory-breadcrumb {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .subcategory-breadcrumb a {
+    color: var(--text-secondary, #666);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .subcategory-breadcrumb a:hover {
+    color: #6366f1;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 10px;
+    color: var(--text-secondary, #999);
+  }
+  
+  .breadcrumb-current {
+    color: var(--text-primary, #111);
+    font-weight: 500;
+  }
+  </style>
+</body>
+</html>

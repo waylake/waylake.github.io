@@ -1,0 +1,136 @@
+core_fields:
+  - id: metaphysics
+    title: 形而上學
+    title_ko: 형이상학
+    description: 존재, 실재, 시간과 공간, 자유의지의 문제
+    image: /assets/images/philosophy-metaphysics.webp
+    color: "#6366f1"
+    keywords:
+      - 존재
+      - 실재
+      - 시간
+      - 공간
+      - 자유의지
+      - 인과율
+      
+  - id: epistemology
+    title: 認識論
+    title_ko: 인식론
+    description: 지식의 기원, 진리의 기준, 인식의 한계
+    image: /assets/images/philosophy-epistemology.webp
+    color: "#8b5cf6"
+    keywords:
+      - 지식
+      - 진리
+      - 경험
+      - 이성
+      - 회의주의
+      - 확실성
+      
+  - id: ethics
+    title: 倫理學
+    title_ko: 윤리학
+    description: 도덕의 본질, 가치의 기준, 도덕적 책임
+    image: /assets/images/philosophy-ethics.webp
+    color: "#ec4899"
+    keywords:
+      - 도덕
+      - 가치
+      - 책임
+      - 정의
+      - 선과 악
+      - 의무
+      
+  - id: political_philosophy
+    title: 政治哲學
+    title_ko: 정치철학
+    description: 정의, 자유, 권력의 정당성
+    image: /assets/images/philosophy-political.webp
+    color: "#f59e0b"
+    keywords:
+      - 정의
+      - 자유
+      - 권력
+      - 민주주의
+      - 계약론
+      - 국가
+
+modern_philosophy:
+  - id: rationalism
+    title: 合理論
+    title_ko: 합리론
+    period: 17세기
+    description: 이성을 통한 진리 탐구
+    image: /assets/images/philosophy-rationalism.webp
+    color: "#3b82f6"
+    philosophers:
+      - 데카르트
+      - 스피노자
+      - 라이프니츠
+    order: 1
+    
+  - id: empiricism
+    title: 經驗論
+    title_ko: 경험론
+    period: 17-18세기
+    description: 경험을 통한 지식 획득
+    image: /assets/images/philosophy-empiricism.webp
+    color: "#10b981"
+    philosophers:
+      - 록크
+      - 버클리
+      - 흄
+    order: 2
+    
+  - id: kant
+    title: カント
+    title_ko: 칸트
+    period: 18세기
+    description: 합리론과 경험론의 종합
+    image: /assets/images/philosophy-kant.webp
+    color: "#6366f1"
+    philosophers:
+      - 칸트
+    order: 3
+    
+  - id: nineteenth_century
+    title: 19世紀哲學
+    title_ko: 19세기 철학
+    period: 19세기
+    description: 관념론, 실존주의, 실용주의
+    image: /assets/images/philosophy-19th.webp
+    color: "#8b5cf6"
+    philosophers:
+      - 헤겔
+      - 니체
+      - 키에르케고르
+      - 마르크스
+    order: 4
+
+contemporary_philosophy:
+  - id: analytic_philosophy
+    title: 分析哲學
+    title_ko: 분석철학
+    period: 20세기~
+    description: 언어 분석, 논리, 과학철학
+    image: /assets/images/philosophy-analytic.webp
+    color: "#06b6d4"
+    philosophers:
+      - 러셀
+      - 비트겐슈타인
+      - 카르납
+      - 퀘이인
+      
+  - id: continental_philosophy
+    title: 大陸哲學
+    title_ko: 대륙철학
+    period: 20세기~
+    description: 현상학, 실존주의, 구조주의
+    image: /assets/images/philosophy-continental.webp
+    color: "#f43f5e"
+    philosophers:
+      - 후설
+      - 하이데거
+      - 사르트르
+      - 푸코
+      - 데리다

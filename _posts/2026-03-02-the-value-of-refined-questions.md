@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Unspoken Power of Precise Questioning: Why the Right Question Changes Everything"
-date:   2026-03-02 00:00:00 +0900
+title: "The Unspoken Power of Precise Questioning: Why the Right Question Changes Everything"
+date: 2026-03-02 00:00:00 +0900
 categories: philosophy
 author: waylake
 tags: [thinking, problemsolving, epistemology, craft]

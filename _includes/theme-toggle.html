@@ -1,29 +1,35 @@
 <div class="theme-toggle-container">
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    ◐
+  </button>
 </div>
 
 <script>
-  (function() {
-    const themeToggle = document.getElementById('theme-toggle');
+  (function () {
+    const themeToggle = document.getElementById("theme-toggle");
     const html = document.documentElement;
 
     function getCurrentTheme() {
-      return localStorage.getItem('theme') ||
-             (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      return (
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light")
+      );
     }
 
     function setTheme(theme) {
-      html.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
+      html.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
     }
 
     // Initialize theme
     setTheme(getCurrentTheme());
 
     // Toggle theme on click
-    themeToggle.addEventListener('click', function() {
-      const current = html.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
+    themeToggle.addEventListener("click", function () {
+      const current = html.getAttribute("data-theme");
+      const newTheme = current === "dark" ? "light" : "dark";
       setTheme(newTheme);
     });
   })();

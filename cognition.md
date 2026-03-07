@@ -4,7 +4,7 @@ title: 認知科學
 permalink: /cognition/
 ---
 
-{% include category-template.html 
-  image_path="/assets/images/cognition.webp" 
-  title="認知科學" 
+{% include category-template.html
+  image_path="/assets/images/cognition.webp"
+  title="認知科學"
   posts=site.categories.cognition %}

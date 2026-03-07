@@ -10,12 +10,12 @@ This project follows GitHub Flow for branch management.
 
 ## Branch Naming Convention
 
-| Prefix | Purpose | Example |
-|--------|---------|---------|
-| `post/` | New blog post | `post/understanding-ai-cognition` |
-| `fix/` | Bug fixes | `fix/broken-image-link` |
-| `update/` | Improvements/refactoring | `update/optimize-images` |
-| `docs/` | Documentation updates | `docs/update-readme` |
+| Prefix    | Purpose                  | Example                           |
+| --------- | ------------------------ | --------------------------------- |
+| `post/`   | New blog post            | `post/understanding-ai-cognition` |
+| `fix/`    | Bug fixes                | `fix/broken-image-link`           |
+| `update/` | Improvements/refactoring | `update/optimize-images`          |
+| `docs/`   | Documentation updates    | `docs/update-readme`              |
 
 ## Workflow
 
@@ -53,19 +53,19 @@ gh pr create --title "<title>" --body "<description>"
 
 Format: `<type>: <description>`
 
-| Type | Description |
-|------|-------------|
-| `add` | New feature/content |
-| `edit` | Modifying existing content |
-| `fix` | Bug fixes |
-| `update` | Improvements |
-| `remove` | Removing files/code |
-| `docs` | Documentation only |
-| `refactor` | Code refactoring |
+| Type       | Description                |
+| ---------- | -------------------------- |
+| `add`      | New feature/content        |
+| `edit`     | Modifying existing content |
+| `fix`      | Bug fixes                  |
+| `update`   | Improvements               |
+| `remove`   | Removing files/code        |
+| `docs`     | Documentation only         |
+| `refactor` | Code refactoring           |
 
 ### Examples
 
-```
+```text
 add: new post about cognitive biases
 edit: update AI section in philosophy post
 fix: broken image link on cognition page
@@ -75,6 +75,7 @@ update: optimize site performance
 ## Branch Protection Rules
 
 Master branch is protected with:
+
 - Require pull request before merging
 - Require status checks to pass
 - Require linear history

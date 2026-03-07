@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Metric of Visibility: When Good Engineers Die Alone"
-date:   2026-03-05 00:00:00 +0900
+title: "The Metric of Visibility: When Good Engineers Die Alone"
+date: 2026-03-05 00:00:00 +0900
 categories: psychology
 author: waylake
 tags: [engineering, workplace, career, visibility]

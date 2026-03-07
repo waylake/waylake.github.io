@@ -12,7 +12,7 @@ core_fields:
       - 공간
       - 자유의지
       - 인과율
-      
+
   - id: epistemology
     title: 認識論
     title_ko: 인식론
@@ -26,7 +26,7 @@ core_fields:
       - 이성
       - 회의주의
       - 확실성
-      
+
   - id: ethics
     title: 倫理學
     title_ko: 윤리학
@@ -40,7 +40,7 @@ core_fields:
       - 정의
       - 선과 악
       - 의무
-      
+
   - id: political_philosophy
     title: 政治哲學
     title_ko: 정치철학
@@ -68,7 +68,7 @@ modern_philosophy:
       - 스피노자
       - 라이프니츠
     order: 1
-    
+
   - id: empiricism
     title: 經驗論
     title_ko: 경험론
@@ -81,7 +81,7 @@ modern_philosophy:
       - 버클리
       - 흄
     order: 2
-    
+
   - id: kant
     title: カント
     title_ko: 칸트
@@ -92,7 +92,7 @@ modern_philosophy:
     philosophers:
       - 칸트
     order: 3
-    
+
   - id: nineteenth_century
     title: 19世紀哲學
     title_ko: 19세기 철학
@@ -120,7 +120,7 @@ contemporary_philosophy:
       - 비트겐슈타인
       - 카르납
       - 퀘이인
-      
+
   - id: continental_philosophy
     title: 大陸哲學
     title_ko: 대륙철학

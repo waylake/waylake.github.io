@@ -25,6 +25,7 @@ baseurl: ""
 url: "https://waylake.github.io"
 twitter_username: waylake
 github_username: waylake
+email: waylake@waylake.com
 
 # Build settings
 plugins:

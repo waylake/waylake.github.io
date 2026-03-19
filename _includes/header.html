@@ -9,8 +9,12 @@
       <div class="trigger">
         <a class="page-link" href="{{ "/" | relative_url }}">ホーム</a>
         <a class="page-link" href="{{ "/posts/" | relative_url }}">記事</a>
+        <a class="page-link" href="{{ "/about/" | relative_url }}">何について</a>
         {% if site.github_username %}
           <a class="page-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        {% endif %}
+        {% if site.email %}
+          <a class="page-link" href="mailto:{{ site.email }}">Contact</a>
         {% endif %}
       </div>
     </nav>

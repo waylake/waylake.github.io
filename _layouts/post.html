@@ -6,6 +6,29 @@
   <title>{{ page.title | escape }} - {{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 200 }}">
   <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+
+  <!-- AI Search Optimization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "datePublished": "{{ page.date | date: "%Y-%m-%d" }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date: "%Y-%m-%d" }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author | default: site.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}"
+    },
+    "url": "{{ site.url }}{{ page.url }}",
+    "description": "{{ page.excerpt | strip_html | truncate: 200 }}",
+    "keywords": "{{ page.tags | join: ", " | default: "" }}"
+  }
+  </script>
 </head>
 <body>
   {% include header.html %}

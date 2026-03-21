@@ -9,6 +9,26 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
   <link rel="preload" href="{{ "/assets/images/profile.webp" | relative_url }}" as="image">
   <link rel="prefetch" href="{{ "/assets/images/landing-bg.webp" | relative_url }}">
+
+  <!-- AI Search Optimization: WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "waylake"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
   {% include header.html %}

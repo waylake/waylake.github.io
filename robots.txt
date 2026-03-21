@@ -1,0 +1,39 @@
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: bytespider
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Default
+User-agent: *
+Allow: /
+
+Sitemap: https://waylake.github.io/sitemap.xml

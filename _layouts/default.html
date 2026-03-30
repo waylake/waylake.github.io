@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}" data-theme="light">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,15 @@
 
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="92vP6_uhTN26jQcqrF15Wh90AWzz7j5autqQGBJ843A">
+
+  <!-- Theme initialization: runs before page render to prevent blinking -->
+  <script>
+    (function () {
+      var theme = localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 
   <!-- AI Search Optimization: WebSite Schema -->
   <script type="application/ld+json">

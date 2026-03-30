@@ -1,21 +1,21 @@
 :root {
-  --bg: #fafafa;
-  --text: #2a2a2a;
-  --muted: #8a8a8a;
-  --border: #e5e5e5;
-  --link: #2a2a2a;
-  --code-bg: #f0f0f0;
-  --header-bg: #fafafa;
+  --bg: #f7f5f2;
+  --text: #2c2924;
+  --muted: #8c8680;
+  --border: #e8e4de;
+  --link: #2c2924;
+  --code-bg: #efebe5;
+  --header-bg: #f7f5f2;
   --max-width: 600px;
 }
 [data-theme="dark"] {
-  --bg: #141414;
-  --text: #d0d0d0;
-  --muted: #6a6a6a;
-  --border: #2a2a2a;
-  --link: #d0d0d0;
-  --code-bg: #1f1f1f;
-  --header-bg: #141414;
+  --bg: #1a1916;
+  --text: #c4bfb6;
+  --muted: #6b6560;
+  --border: #2d2a26;
+  --link: #c4bfb6;
+  --code-bg: #242220;
+  --header-bg: #1a1916;
 }
 * {
   box-sizing: border-box;
@@ -31,9 +31,9 @@ body {
     -apple-system,
     sans-serif;
   font-size: 15px;
-  line-height: 1.8;
-  font-weight: 300;
-  letter-spacing: 0.02em;
+  line-height: 1.9;
+  font-weight: 350;
+  letter-spacing: 0.025em;
   transition:
     background-color 0.5s,
     color 0.5s;
@@ -84,15 +84,15 @@ a:hover {
   gap: 1.5rem;
 }
 .page-link {
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 300;
+  font-size: 0.8rem;
+  font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease;
 }
 .page-link:hover {
-  color: var(--text);
+  color: var(--muted);
 }
 .main-content {
   max-width: var(--max-width);
@@ -110,6 +110,7 @@ h6 {
   line-height: 1.6;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
 }
 h1 {
   font-size: 1.5rem;
@@ -238,7 +239,7 @@ hr {
   font-size: 0.8rem;
   color: var(--muted);
   margin-top: 0.4rem;
-  font-weight: 300;
+  font-weight: 350;
 }
 .page-content {
   max-width: var(--max-width);
@@ -348,7 +349,7 @@ hr {
   font-size: 0.8rem;
   color: var(--muted);
   margin-top: 0.4rem;
-  font-weight: 300;
+  font-weight: 350;
 }
 .post-meta span {
   margin-right: 0.75rem;

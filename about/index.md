@@ -30,12 +30,12 @@ description: 道淵の理念と目的
 
 ## このサイトについて
 
-**道淵**は、GitHub 협업 전략 및 개발 관련 생각 정리 블로그です。開発者と思考的重みが必要な全ての人に向けて、実用的な戦略と哲学的な洞察を共有します。
+**道淵**は、GitHub collaboration strategies, development workflows, and philosophical reflections on cognition and psychologyを整理する 블로그です。開発者と思索的重みが必要な全ての人に向けて、実用的な戦略と哲学的な洞察を共有します。
 
 ## よくある質問
 
 **このサイトは何についてのサイトですか。**
-GitHub 협업 전략, 개발 워크플로우, 그리고 철학·인지과학·심리학에 대한 内容を考えるスペースです。
+GitHub collaboration strategies, development workflows、そして哲学·認知科学·心理学の内容を思索するスペースです。
 
 **主なテーマはありますか。**
 認知科学、心理学、哲学の三つの領域を中心に、思考を梳くことを大切にしています。

@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'ko' }}" data-theme="light">
+<html lang="{{ site.lang | default: 'ko' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | escape }} - {{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 200 }}">
   <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relative_url }}">
+
+  <!-- Theme initialization: runs before page render to prevent blinking -->
+  <script>
+    (function () {
+      var theme = localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 
   <!-- AI Search Optimization -->
   <script type="application/ld+json">

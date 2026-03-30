@@ -2,7 +2,6 @@
 layout: post
 title: "GitHub 협업 문제 정의 및 해결 전략 (gh CLI 버전)"
 date: 2026-02-26 00:00:00 +0900
-categories: psychology
 author: waylake
 tags: [github, collaboration, gh-cli, workflow, psychology]
 lang: ko

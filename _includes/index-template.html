@@ -5,30 +5,42 @@
   </div>
 </div>
 
-<div class="category-nav">
-  <a href="/cognition" class="category-item">認知科學</a>
-  <a href="/psychology" class="category-item">心理學</a>
-  <a href="/philosophy" class="category-item">哲學</a>
+<div class="category-gallery">
+  <a href="/cognition" class="category-card">
+    <img src="{{ "/assets/images/cognition.webp" | relative_url }}" alt="認知科學">
+    <span class="category-label">認知科學</span>
+  </a>
+  <a href="/psychology" class="category-card">
+    <img src="{{ "/assets/images/psychology.webp" | relative_url }}" alt="心理學">
+    <span class="category-label">心理學</span>
+  </a>
+  <a href="/philosophy" class="category-card">
+    <img src="{{ "/assets/images/philosophy.webp" | relative_url }}" alt="哲學">
+    <span class="category-label">哲學</span>
+  </a>
 </div>
 
-<div class="divider"></div>
+<div class="sumi-gallery-section">
+  <p class="sumi-section-label">Visual Meditation</p>
 
-<div class="section-header">
-  <span class="section-label">近況</span>
-</div>
-
-<div class="post-list">
-{% for post in site.posts limit:5 %}
-<a href="{{ post.url | relative_url }}" class="post-link">
-  <span class="post-title">{{ post.title }}</span>
-  <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-</a>
-{% endfor %}
-</div>
-
-<div class="more-link">
-  <a href="/posts">すべて見る →</a>
+  <div class="sumi-gallery">
+    <div class="sumi-card">
+      <img src="{{ "/ast/sumi_e_stillness.svg" | relative_url }}" alt="静 - Stillness">
+      <span class="sumi-philosophy">静</span>
+    </div>
+    <div class="sumi-card">
+      <img src="{{ "/ast/sumi_e_space.svg" | relative_url }}" alt="間 - Space">
+      <span class="sumi-philosophy">間</span>
+    </div>
+    <div class="sumi-card">
+      <img src="{{ "/ast/sumi_e_hand_pouring_water.svg" | relative_url }}" alt="素 - Simplicity">
+      <span class="sumi-philosophy">素</span>
+    </div>
+    <div class="sumi-card">
+      <img src="{{ "/ast/sumi_e_emptiness.svg" | relative_url }}" alt="空 - Emptiness">
+      <span class="sumi-philosophy">空</span>
+    </div>
+  </div>
 </div>
 
 {% include index-style.html %}
-{% include category-style.html %}

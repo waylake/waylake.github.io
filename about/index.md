@@ -4,47 +4,77 @@ title: 何について
 description: 道淵の理念と目的
 ---
 
-道淵は、思惟を梳く空間です。
+<style>
+  .about-hero-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 3rem;
+    display: block;
+  }
 
-現代の情報潮流の中で、心はすぐに絡み合ってきます。浮かんでくる考えを整理し、絡み合った糸を手放し、再び高鳴きを取り戻す場所。それが道淵です。
+  .about-hero-image img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(20%);
+  }
 
-## 三つの領域
+  [data-theme="dark"] .about-hero-image img {
+    filter: grayscale(20%) brightness(0.75);
+  }
 
-道淵は三つの領域、三つの分野を交差点として思考を梳きます。
+  .about-content {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
 
-**認知科学** — 認知科学は、現象の構造を理解する分野です。ものがどのように動き、人がどのように考えるのかを解明します。
+  .philosophy-list {
+    margin: 2rem 0;
+  }
 
-**心理学** — 心理学は、内面の動きを見つめる分野です。感情の重なり、記憶の層、無意識の流れを探求します。
+  .philosophy-item {
+    margin: 1rem 0;
+  }
 
-**哲学** — 哲学は、根本的な問いを抱え続ける分野です。なぜそうなのか、そうでないのか、それは正しいのかを考えます。
+  .about-footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
 
-## 静・間・素
+  .about-footer a {
+    color: var(--text);
+    text-decoration: none;
+  }
 
-思索の末に残るのは、三文字だけです。
+  .about-footer a:hover {
+    color: var(--muted);
+  }
+</style>
 
-**静** — 静とは、喧騒を手放し、高鳴りを収めることです。
+<div class="about-hero-image">
+  <img src="{{ '/ast/sumi_e_hand_pouring_water.svg' | relative_url }}" alt="素 - Simplicity">
+</div>
 
-**間** — 間とは、判断と判断の間の空間を守ることです。
+<div class="about-content">
+  <p>道淵は、思惟を梳く空間です。認知科学・心理学・哲学の交差点で、浮かぶ考えを整理し、静・間・素を取り戻す。</p>
 
-**素** — 素とは、複雑さを取り除き、構造だけを残すことです。
+  <p>現代の情報潮流の中で、心はすぐに絡み合ってきます。この場所は、その糸を手放し、再び清鳴りを取り戻すためのものです。</p>
 
-## このサイトについて
+  <div class="philosophy-list">
+    <p class="philosophy-item"><strong>静</strong> — 喧騒を手放し、清鳴りを収める。</p>
+    <p class="philosophy-item"><strong>間</strong> — 判断と判断の間の空間を守る。</p>
+    <p class="philosophy-item"><strong>素</strong> — 複雑さを取り除き、構造だけを残す。</p>
+  </div>
 
-**道淵**は、GitHub collaboration strategies, development workflows, and philosophical reflections on cognition and psychologyを整理する 블로그です。開発者と思索的重みが必要な全ての人に向けて、実用的な戦略と哲学的な洞察を共有します。
+  <p>思索の末に残るのは、この三文字だけです。</p>
 
-## よくある質問
+  <hr>
 
-**このサイトは何についてのサイトですか。**
-GitHub collaboration strategies, development workflows、そして哲学·認知科学·心理学の内容を思索するスペースです。
-
-**主なテーマはありますか。**
-認知科学、心理学、哲学の三つの領域を中心に、思考を梳くことを大切にしています。
-
-**更新頻度はどの程度ですか。**
-不定期ですが、思索に適したテーマができた時に更新します。
-
-## Contact
-
-<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
-<span style="color: var(--muted); margin: 0 0.5rem;">·</span>
-<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  <div class="about-footer">
+    <a href="https://github.com/waylake">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/waylake/">LinkedIn</a> ·
+    <a href="mailto:waylake@waylake.com">Email</a>
+  </div>
+</div>

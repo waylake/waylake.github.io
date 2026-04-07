@@ -213,27 +213,25 @@
   /* Sumi-e Gallery Section - 静·間·素 */
   .sumi-gallery-section {
     margin: 4rem 0;
-    padding: 0 2rem;
   }
 
   .sumi-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    max-width: 900px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
   }
 
   @media (max-width: 768px) {
     .sumi-gallery {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 
   .sumi-card {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
     border-radius: 4px;
     overflow: hidden;
     background: var(--bg-secondary);

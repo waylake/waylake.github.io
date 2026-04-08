@@ -7,30 +7,14 @@
 <script>
   (function () {
     const themeToggle = document.getElementById("theme-toggle");
-    const html = document.documentElement;
+    const themeManager = window.themeManager;
 
-    function getCurrentTheme() {
-      return (
-        localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light")
-      );
+    if (themeManager && themeToggle) {
+      themeToggle.addEventListener("click", function () {
+        const current = themeManager.getCurrentTheme();
+        const newTheme = current === "dark" ? "light" : "dark";
+        themeManager.setTheme(newTheme);
+      });
     }
-
-    function setTheme(theme) {
-      html.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-    }
-
-    // Initialize theme
-    setTheme(getCurrentTheme());
-
-    // Toggle theme on click
-    themeToggle.addEventListener("click", function () {
-      const current = html.getAttribute("data-theme");
-      const newTheme = current === "dark" ? "light" : "dark";
-      setTheme(newTheme);
-    });
   })();
 </script>

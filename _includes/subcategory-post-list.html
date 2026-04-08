@@ -1,0 +1,27 @@
+{% if include.philosophers %}
+<div class="philosophers-section">
+  <h3 class="subsection-title">主要哲學者</h3>
+  <div class="philosophers-list">
+    {% for philosopher in include.philosophers %}
+    <span class="philosopher-badge">{{ philosopher }}</span>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="section-header">
+  <span class="section-label">{{ include.category_label }} 포스트</span>
+</div>
+
+<div class="zen-post-list">
+{% assign subcategory_posts = site.posts | where: "philosophy_subcategory", include.subcategory %}
+{% for post in subcategory_posts %}
+<a href="{{ post.url | relative_url }}" class="zen-post-item">
+  <span class="zen-post-title">{{ post.title }}</span>
+  <span class="zen-post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+</a>
+{% endfor %}
+{% if subcategory_posts.size == 0 %}
+<p class="zen-no-posts">아직 관련 포스트가 없습니다.</p>
+{% endif %}
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "ko" }}">
+<head>
+  {% include head.html preload_profile=include.preload_profile prefetch_landing=include.prefetch_landing rss=include.rss %}
+  {% if include.schema %}{% include schema-website.html %}{% endif %}
+  {% if include.article_schema %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "datePublished": "{{ page.date | date: "%Y-%m-%d" }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date: "%Y-%m-%d" }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author | default: site.author }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}"
+    },
+    "url": "{{ site.url }}{{ page.url }}",
+    "description": "{{ page.excerpt | strip_html | truncate: 200 }}",
+    "keywords": "{{ page.tags | join: ", " | default: "" }}"
+  }
+  </script>
+  {% endif %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  {% if include.post_navigation %}
+  <nav class="post-navigation">
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url }}" class="prev-post">← {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url }}" class="next-post">{{ page.next.title }} →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  {% include footer.html %}
+  {% include theme-toggle.html %}
+</body>
+</html>

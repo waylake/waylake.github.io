@@ -1,21 +1,27 @@
+/* 와비사비/젠 미학 색상 팔레트 */
 :root {
-  --bg: #f7f5f2;
-  --text: #2c2924;
-  --muted: #8c8680;
-  --border: #e8e4de;
-  --link: #2c2924;
-  --code-bg: #efebe5;
-  --header-bg: #f7f5f2;
-  --max-width: 600px;
+  /* 자연의 색 - 따뜻한 미색 배경과 깊은 먹색 텍스트 */
+  --bg: #F9F8F4;
+  --text: #3D3A36;
+  --muted: #9A958B;
+  --border: #E8E6E1;
+  --link: #2C2924;
+  --code-bg: #EFEBE5;
+  --header-bg: #F9F8F4;
+
+  /* 레이아웃 */
+  --max-width: 580px;
 }
+
 [data-theme="dark"] {
-  --bg: #1a1916;
-  --text: #c4bfb6;
-  --muted: #6b6560;
-  --border: #2d2a26;
-  --link: #c4bfb6;
-  --code-bg: #242220;
-  --header-bg: #1a1916;
+  /* 깊은 밤의 색 - 완전한 검정이 아닌 자연스러운 어둠 */
+  --bg: #1C1B18;
+  --text: #D6D3CC;
+  --muted: #A8A59E;
+  --border: #2F2E2B;
+  --link: #D6D3CC;
+  --code-bg: #24221F;
+  --header-bg: #1C1B18;
 }
 * {
   box-sizing: border-box;
@@ -25,15 +31,17 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
+  /* Zen 타이포그래피 - 명조체로 사유적인 분위기 */
   font-family:
+    "Noto Serif KR",
     "Helvetica Neue",
     "Noto Sans KR",
     -apple-system,
-    sans-serif;
-  font-size: 15px;
-  line-height: 1.9;
+    serif;
+  font-size: 15.5px;
+  line-height: 2.0;
   font-weight: 350;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
   transition:
     background-color 0.5s,
     color 0.5s;
@@ -97,7 +105,7 @@ a:hover {
 .main-content {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   min-height: calc(100vh - 200px);
 }
 h1,
@@ -107,10 +115,15 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
+}
+
+/* Zen 제목 스타일 - 명조체로 고전적인 느낌 */
+h1, h2, h3 {
+  font-family: "Noto Serif KR", serif;
 }
 h1 {
   font-size: 1.5rem;
@@ -126,24 +139,32 @@ h4 {
 }
 p {
   margin: 1rem 0;
-  line-height: 1.9;
+  line-height: 2.0;
 }
 code {
   background: var(--code-bg);
   padding: 0.1rem 0.3rem;
-  border-radius: 2px;
+  border-radius: 1.5px;
   font-family: "SF Mono", Consolas, monospace;
   font-size: 0.85em;
   font-weight: 400;
 }
+
+/* 와비사비 코드 블록 - 완벽한 모서리 대신 자연스러운 느낌 */
 pre {
   background: var(--code-bg);
   padding: 1rem;
-  border-radius: 2px;
+  border-radius: 1.5px;
   overflow-x: auto;
   margin: 1.5rem 0;
   border: 1px solid var(--border);
 }
+
+/* 와비사비 코드 블록 - 미세한 그림자 효과로 깊이감 추가 */
+pre {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 pre code {
   background: 0 0;
   padding: 0;
@@ -280,17 +301,23 @@ hr {
 .page-body code {
   background: var(--code-bg);
   padding: 0.1rem 0.3rem;
-  border-radius: 2px;
+  border-radius: 1.5px;
   font-family: "SF Mono", Consolas, monospace;
   font-size: 0.85em;
 }
+
 .page-body pre {
   background: var(--code-bg);
   padding: 1rem;
-  border-radius: 2px;
+  border-radius: 1.5px;
   overflow-x: auto;
   margin: 1.5rem 0;
   border: 1px solid var(--border);
+}
+
+/* 와비사비 코드 블록 - 미세한 그림자 효과로 깊이감 추가 */
+.page-body pre {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 .page-body pre code {
   background: 0 0;
@@ -355,7 +382,12 @@ hr {
   margin-right: 0.75rem;
 }
 .post-body {
-  line-height: 1.9;
+  line-height: 2.0;
+}
+
+/* Zen 제목 스타일 - 명조체로 고전적인 느낌 */
+.post-body h1, .post-body h2, .post-body h3 {
+  font-family: "Noto Serif KR", serif;
 }
 .post-body h1,
 .post-body h2,
@@ -406,9 +438,14 @@ hr {
 .post-body blockquote {
   margin: 1.5rem 0;
   padding-left: 1rem;
-  border-left: 1px solid var(--border);
+  border-left: 2px solid var(--border);
   color: var(--muted);
   font-style: italic;
+}
+
+/* 와비사비 인용문 - 더 두드러진 구분선 */
+.post-body blockquote, .page-body blockquote {
+  border-left-width: 3px;
 }
 .post-body ol,
 .page-body ul {

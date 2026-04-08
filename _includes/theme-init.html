@@ -1,0 +1,22 @@
+<script>
+  (function () {
+    function getCurrentTheme() {
+      return (
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light")
+      );
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+
+    if (typeof window !== "undefined") {
+      window.themeManager = { getCurrentTheme, setTheme };
+      setTheme(getCurrentTheme());
+    }
+  })();
+</script>

@@ -1,46 +1,162 @@
-<div class="hero" style="background-image: url('{{ "/assets/images/landing-bg.webp" | relative_url }}');">
-  <div class="hero-content">
-    <h1 class="hero-title">{{ include.hero_title }}</h1>
-    <p class="hero-subtitle">{{ include.hero_subtitle }}</p>
+<div class="zen-hero-container">
+  <div class="zen-hero-image" style="background-image: url('{{ "/assets/images/landing-bg.webp" | relative_url }}');"></div>
+  <div class="zen-hero-caption">
+    <h1 class="zen-hero-title">{{ include.hero_title }}</h1>
+    <p class="zen-hero-subtitle">{{ include.hero_subtitle }}</p>
   </div>
 </div>
 
-<div class="category-gallery">
-  <a href="/cognition" class="category-card">
-    <img src="{{ "/assets/images/cognition.webp" | relative_url }}" alt="認知科學">
-    <span class="category-label">認知科學</span>
+<div class="zen-category-grid">
+  <a href="/cognition" class="zen-category-item">
+    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/cognition.webp" | relative_url }}');"></div>
+    <span class="zen-category-label">認知科學</span>
   </a>
-  <a href="/psychology" class="category-card">
-    <img src="{{ "/assets/images/psychology.webp" | relative_url }}" alt="心理學">
-    <span class="category-label">心理學</span>
+  <a href="/psychology" class="zen-category-item">
+    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/psychology.webp" | relative_url }}');"></div>
+    <span class="zen-category-label">心理學</span>
   </a>
-  <a href="/philosophy" class="category-card">
-    <img src="{{ "/assets/images/philosophy.webp" | relative_url }}" alt="哲學">
-    <span class="category-label">哲學</span>
+  <a href="/philosophy" class="zen-category-item">
+    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/philosophy.webp" | relative_url }}');"></div>
+    <span class="zen-category-label">哲學</span>
   </a>
 </div>
 
-<div class="sumi-gallery-section">
-  <p class="sumi-section-label">Visual Meditation</p>
-
-  <div class="sumi-gallery">
-    <div class="sumi-card">
-      <img src="{{ "/ast/sumi_e_stillness.svg" | relative_url }}" alt="静 - Stillness">
-      <span class="sumi-philosophy">静</span>
+<div class="zen-sumi-section">
+  <div class="zen-sumi-grid">
+    <div class="zen-sumi-item">
+      <img src="{{ "/ast/sumi_e_stillness.svg" | relative_url }}" alt="静" class="zen-sumi-image">
+      <span class="zen-sumi-term">静</span>
     </div>
-    <div class="sumi-card">
-      <img src="{{ "/ast/sumi_e_space.svg" | relative_url }}" alt="間 - Space">
-      <span class="sumi-philosophy">間</span>
+    <div class="zen-sumi-item">
+      <img src="{{ "/ast/sumi_e_space.svg" | relative_url }}" alt="間" class="zen-sumi-image">
+      <span class="zen-sumi-term">間</span>
     </div>
-    <div class="sumi-card">
-      <img src="{{ "/ast/sumi_e_hand_pouring_water.svg" | relative_url }}" alt="素 - Simplicity">
-      <span class="sumi-philosophy">素</span>
+    <div class="zen-sumi-item">
+      <img src="{{ "/ast/sumi_e_hand_pouring_water.svg" | relative_url }}" alt="素" class="zen-sumi-image">
+      <span class="zen-sumi-term">素</span>
     </div>
-    <div class="sumi-card">
-      <img src="{{ "/ast/sumi_e_emptiness.svg" | relative_url }}" alt="空 - Emptiness">
-      <span class="sumi-philosophy">空</span>
+    <div class="zen-sumi-item">
+      <img src="{{ "/ast/sumi_e_emptiness.svg" | relative_url }}" alt="空" class="zen-sumi-image">
+      <span class="zen-sumi-term">空</span>
     </div>
   </div>
 </div>
 
-{% include index-style.html %}
+<style>
+  .zen-hero-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+
+  .zen-hero-image {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center 70%;
+    border-radius: 2px;
+  }
+
+  .zen-hero-caption {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .zen-hero-title {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .zen-hero-subtitle {
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+  }
+
+  .zen-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .zen-category-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .zen-category-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .zen-category-image {
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    transition: opacity 0.6s ease;
+  }
+
+  .zen-category-item:hover .zen-category-image {
+    opacity: 0.85;
+  }
+
+  .zen-category-label {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+  }
+
+  .zen-sumi-section {
+    margin: 5rem 0;
+  }
+
+  .zen-sumi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .zen-sumi-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .zen-sumi-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zen-sumi-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 2px;
+    background: var(--bg-secondary);
+    filter: grayscale(var(--filter-grayscale));
+    transition: filter 0.4s ease;
+  }
+
+  .zen-sumi-item:hover .zen-sumi-image {
+    filter: grayscale(0%);
+  }
+
+  .zen-sumi-term {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+</style>

@@ -4,55 +4,6 @@ title: 何について
 description: 道淵の理念と目的
 ---
 
-<style>
-  .about-hero-image {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 3rem;
-    display: block;
-  }
-
-  .about-hero-image img {
-    width: 100%;
-    height: auto;
-    filter: grayscale(20%);
-  }
-
-  [data-theme="dark"] .about-hero-image img {
-    filter: grayscale(20%) brightness(0.75);
-  }
-
-  .about-content {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.8;
-  }
-
-  .philosophy-list {
-    margin: 2rem 0;
-  }
-
-  .philosophy-item {
-    margin: 1rem 0;
-  }
-
-  .about-footer {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-
-  .about-footer a {
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .about-footer a:hover {
-    color: var(--muted);
-  }
-</style>
-
 <div class="about-hero-image">
   <img src="{{ '/ast/sumi_e_hand_pouring_water.svg' | relative_url }}" alt="素 - Simplicity">
 </div>

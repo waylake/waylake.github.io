@@ -1,37 +1,74 @@
-<div class="category-hero" id="category-hero-{{ include.title | slugify }}">
-  <div class="category-title">{{ include.title }}</div>
+<div class="zen-category-hero-container">
+  <div class="zen-category-hero-image" style="background-image: url('{{ include.image_path | relative_url }}');"></div>
+  <div class="zen-category-hero-caption">
+    <h1 class="zen-category-title">{{ include.title }}</h1>
+  </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = document.createElement("img");
-          img.src = "{{ include.image_path | relative_url }}";
-          img.alt = "{{ include.title }}";
-          img.className = "category-bg";
-          img.loading = "lazy";
-          entry.target.prepend(img);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    const hero = document.getElementById(
-      "category-hero-{{ include.title | slugify }}",
-    );
-    if (hero) observer.observe(hero);
-  });
-</script>
-
-<div class="post-list">
+<div class="zen-post-list">
   {% for post in include.posts %}
-  <a href="{{ post.url | relative_url }}" class="post-link">
-    <span class="post-title">{{ post.title }}</span>
-    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+  <a href="{{ post.url | relative_url }}" class="zen-post-item">
+    <span class="zen-post-title">{{ post.title }}</span>
+    <span class="zen-post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </a>
   {% endfor %}
 </div>
 
-{% include category-style.html %}
+<style>
+  .zen-category-hero-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .zen-category-hero-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+  }
+
+  .zen-category-hero-caption {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .zen-category-title {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 0;
+  }
+
+  .zen-post-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .zen-post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .zen-post-item:hover {
+    opacity: 0.7;
+  }
+
+  .zen-post-title {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .zen-post-date {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    opacity: 0.5;
+  }
+</style>

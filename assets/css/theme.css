@@ -711,3 +711,243 @@ hr {
   scrollbar-width: thin;
   scrollbar-color: var(--muted) transparent;
 }
+
+/* ===== Zen Hero (index) ===== */
+.zen-hero-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.zen-hero-image {
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center 70%;
+  border-radius: 2px;
+}
+
+.zen-hero-caption {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.zen-hero-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin: 0 0 0.5rem 0;
+}
+
+.zen-hero-subtitle {
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+/* ===== Zen Category Grid (index) ===== */
+.zen-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .zen-category-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.zen-category-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.zen-category-image {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  transition: opacity 0.6s ease;
+}
+
+.zen-category-item:hover .zen-category-image {
+  opacity: 0.85;
+}
+
+.zen-category-label {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+/* ===== Zen Sumi (index) ===== */
+.zen-sumi-section {
+  margin: 5rem 0;
+}
+
+.zen-sumi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .zen-sumi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.zen-sumi-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zen-sumi-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  background: var(--bg-secondary);
+  filter: grayscale(var(--filter-grayscale));
+  transition: filter 0.4s ease;
+}
+
+.zen-sumi-item:hover .zen-sumi-image {
+  filter: grayscale(0%);
+}
+
+.zen-sumi-term {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+}
+
+/* ===== Zen Category Hero (category page) ===== */
+.zen-category-hero-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.zen-category-hero-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+
+.zen-category-hero-caption {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.zen-category-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.zen-post-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.zen-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.zen-post-item:hover {
+  opacity: 0.7;
+}
+
+.zen-post-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.zen-post-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+/* ===== Zen Subcategory Header ===== */
+.zen-subcategory-header {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.zen-subcategory-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin: 0 0 1rem 0;
+}
+
+.zen-subcategory-description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 0 0 2rem 0;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.zen-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.zen-keyword {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.zen-philosophers {
+  margin: 2rem 0;
+}
+
+.zen-philosophers-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  margin: 0 0 1rem 0;
+  opacity: 0.6;
+}
+
+.zen-philosophers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.zen-philosopher {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}

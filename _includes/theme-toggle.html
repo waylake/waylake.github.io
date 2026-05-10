@@ -3,18 +3,3 @@
     ◐
   </button>
 </div>
-
-<script>
-  (function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeManager = window.themeManager;
-
-    if (themeManager && themeToggle) {
-      themeToggle.addEventListener("click", function () {
-        const current = themeManager.getCurrentTheme();
-        const newTheme = current === "dark" ? "light" : "dark";
-        themeManager.setTheme(newTheme);
-      });
-    }
-  })();
-</script>

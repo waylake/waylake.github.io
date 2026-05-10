@@ -447,13 +447,6 @@ hr {
   font-size: 0.85rem;
   font-weight: 500;
 }
-[data-theme="dark"] .subcategory-title {
-  color: var(--text-primary, #f9fafb);
-}
-[data-theme="dark"] .keyword-badge {
-  background: var(--bg-secondary, #374151);
-  color: var(--text-secondary, #9ca3af);
-}
 
 /* ===== Philosophers Section ===== */
 .philosophers-section {
@@ -477,10 +470,6 @@ hr {
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 500;
-}
-[data-theme="dark"] .philosopher-badge {
-  background: var(--bg-secondary, #374151);
-  color: var(--text-primary, #f9fafb);
 }
 .no-posts {
   color: var(--text-secondary, #666);
@@ -546,9 +535,6 @@ hr {
   width: 100%;
   height: auto;
   filter: grayscale(20%);
-}
-[data-theme="dark"] .about-hero-image img {
-  filter: grayscale(20%) brightness(0.75);
 }
 .about-content {
   max-width: 600px;
@@ -639,10 +625,6 @@ hr {
   text-shadow: var(--text-shadow-light);
 }
 
-[data-theme="dark"] .text-overlay {
-  text-shadow: var(--text-shadow-dark);
-}
-
 .image-base {
   width: 100%;
   height: 100%;
@@ -652,16 +634,8 @@ hr {
     filter 0.4s ease;
 }
 
-[data-theme="dark"] .image-base {
-  filter: brightness(var(--filter-brightness-dark));
-}
-
 .image-base:hover {
   transform: scale(1.05);
-}
-
-[data-theme="dark"] .image-base:hover {
-  filter: brightness(calc(var(--filter-brightness-dark) + 0.12));
 }
 
 /* ===== Category Hero ===== */
@@ -950,4 +924,35 @@ hr {
 .zen-philosopher {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
+}
+
+/* ===== Dark Mode Overrides ===== */
+[data-theme="dark"] .subcategory-title {
+  color: var(--text-primary, #f9fafb);
+}
+
+[data-theme="dark"] .keyword-badge {
+  background: var(--bg-secondary, #374151);
+  color: var(--text-secondary, #9ca3af);
+}
+
+[data-theme="dark"] .philosopher-badge {
+  background: var(--bg-secondary, #374151);
+  color: var(--text-primary, #f9fafb);
+}
+
+[data-theme="dark"] .about-hero-image img {
+  filter: grayscale(20%) brightness(0.75);
+}
+
+[data-theme="dark"] .text-overlay {
+  text-shadow: var(--text-shadow-dark);
+}
+
+[data-theme="dark"] .image-base {
+  filter: brightness(var(--filter-brightness-dark));
+}
+
+[data-theme="dark"] .image-base:hover {
+  filter: brightness(calc(var(--filter-brightness-dark) + 0.12));
 }

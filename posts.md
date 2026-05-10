@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 title: すべての記事
 permalink: /posts/
 ---

@@ -1,22 +1,10 @@
 <script>
-  (function () {
-    function getCurrentTheme() {
-      return (
-        localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light")
-      );
+  (function() {
+    var theme = localStorage.getItem("theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
-
-    function setTheme(theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-    }
-
-    if (typeof window !== "undefined") {
-      window.themeManager = { getCurrentTheme, setTheme };
-      setTheme(getCurrentTheme());
-    }
+    document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
+<script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>

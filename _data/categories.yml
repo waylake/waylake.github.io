@@ -1,0 +1,14 @@
+- slug: cognition
+  name: 認知科學
+  image: /assets/images/cognition.webp
+  url: /cognition
+
+- slug: psychology
+  name: 心理學
+  image: /assets/images/psychology.webp
+  url: /psychology
+
+- slug: philosophy
+  name: 哲學
+  image: /assets/images/philosophy.webp
+  url: /philosophy

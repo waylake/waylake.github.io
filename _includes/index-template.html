@@ -7,37 +7,21 @@
 </div>
 
 <div class="zen-category-grid">
-  <a href="/cognition" class="zen-category-item">
-    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/cognition.webp" | relative_url }}');"></div>
-    <span class="zen-category-label">認知科學</span>
+  {% for category in site.data.categories %}
+  <a href="{{ category.url | relative_url }}" class="zen-category-item">
+    <div class="zen-category-image" style="background-image: url('{{ category.image | relative_url }}');"></div>
+    <span class="zen-category-label">{{ category.name }}</span>
   </a>
-  <a href="/psychology" class="zen-category-item">
-    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/psychology.webp" | relative_url }}');"></div>
-    <span class="zen-category-label">心理學</span>
-  </a>
-  <a href="/philosophy" class="zen-category-item">
-    <div class="zen-category-image" style="background-image: url('{{ "/assets/images/philosophy.webp" | relative_url }}');"></div>
-    <span class="zen-category-label">哲學</span>
-  </a>
+  {% endfor %}
 </div>
 
 <div class="zen-sumi-section">
   <div class="zen-sumi-grid">
+    {% for sumi in site.data.sumi %}
     <div class="zen-sumi-item">
-      <img src="{{ "/ast/sumi_e_stillness.svg" | relative_url }}" alt="静" class="zen-sumi-image">
-      <span class="zen-sumi-term">静</span>
+      <img src="{{ sumi.image | relative_url }}" alt="{{ sumi.kanji }}" class="zen-sumi-image">
+      <span class="zen-sumi-term">{{ sumi.kanji }}</span>
     </div>
-    <div class="zen-sumi-item">
-      <img src="{{ "/ast/sumi_e_space.svg" | relative_url }}" alt="間" class="zen-sumi-image">
-      <span class="zen-sumi-term">間</span>
-    </div>
-    <div class="zen-sumi-item">
-      <img src="{{ "/ast/sumi_e_hand_pouring_water.svg" | relative_url }}" alt="素" class="zen-sumi-image">
-      <span class="zen-sumi-term">素</span>
-    </div>
-    <div class="zen-sumi-item">
-      <img src="{{ "/ast/sumi_e_emptiness.svg" | relative_url }}" alt="空" class="zen-sumi-image">
-      <span class="zen-sumi-term">空</span>
-    </div>
+    {% endfor %}
   </div>
 </div>

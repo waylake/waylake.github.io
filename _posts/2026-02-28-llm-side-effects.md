@@ -7,17 +7,36 @@ tags: [llm, ai, essay]
 lang: ko
 ---
 
-The LLM Paradox: We’re Forgetting How to Speak to Humans
-The longer we use LLM services, the more I see a specific kind of "psychosis" spreading in the workplace. LLMs are so good at hallucinating a coherent answer from a vague prompt that people have started to believe their vague prompts were actually coherent.
+> "Garbage in, garbage out." — 옛말이지만, 이제는 다른 의미로 느껴진다.
 
-LLMs Are Not Humans It sounds obvious, but we are losing our grip on this fact. People are beginning to treat their colleagues like a black-box LLM. They’ve forgotten that human communication requires precision, shared context, and accountability. In the pre-LLM era, "make it pop" was a phrase reserved for clueless clients. Now, it’s becoming the standard operating procedure inside engineering teams.
+LLM은 구체적이지 않은 프롬프트에도 그럴듯한 답을 내놓는다.
+문제는 사람들이 그 결과를 보고, '내 말이 충분히 명확했구나'라고 착각한다는 것이다.
 
-The "Do It Well, You Figure It Out" Fallacy I see managers—even those with engineering backgrounds—who are terrified of being held accountable for their own bad ideas. They hide behind vagueness. They use tools like Claude Code as a shield to bypass technical debt discussions.
+동료에게 말을 할 때도 프롬프트를 입력하는 것과 같아졌다.
+정확히 전달하지 않아도, 맥락이 부족해도, 결국 뭔가 나올 것이라고 믿는다.
 
-When an engineer spends days fixing a half-baked requirement and managing technical constraints, the feedback isn't "Thank you for the due diligence." Instead, it’s: "See? It was possible after all. Why did you push back so hard? LLMs could've done it in seconds." This is gaslighting. They want the output of a senior engineer while providing the input of a garbage prompt.
+예전에는 "감성 있게"가 클라이언트의 말이었다면,
+지금은 개발 팀 안에서 자연스럽게 나오는 말이 되었다.
 
-The Death of Articulation LLMs accept "garbage in" and provide "plausible out." This has become a drug. People are losing the ability to articulate their own thoughts. They throw a mess of words at you and expect a miracle. If this continues, we aren't just looking at bad software; we’re looking at a breakdown of professional sanity.
+> "됐잖아. 왜 반대했어? LLM이 몇 초 만에 끝냈잖아."
 
-I’ve felt the symptoms myself. Lately, I’ve caught myself thinking, "Explaining this to my team is a waste of 'communication cost.' I’d rather just pay for more API tokens and do it myself."
+수일 동안 요구사항을 정리하고 기술적 제약을 고민한 끝에 나온 결과에 대한 반응이다.
+고맙다는 말은 없다. 오히려 내 노력이 무의미했던 것처럼 말한다.
 
-But we must remember: A high-functioning team is not a collection of prompt engineers. True teamwork is exponentially more efficient than a lone developer with an LLM. We cannot afford to lose the art of talking to each other.
+좋은 결과를 원하면서도, 명확하게 전달하지 못하는 상황이 반복된다.
+
+LLM이 그럴듯하게 만들어주니까, 사람들은 자신의 생각을 정리할 필요가 없다고 생각한다.
+말을 던지기만 하면 잘 되기를 기대한다.
+
+하지만 소프트웨어가 엉키는 것보다 더 큰 문제는,
+서로를 이해하는 것이 점점 어려워진다는 것이다.
+
+> "팀에 일일히 설명하는 게 피곤해. 나 그냥 혼자 LLM한테 시키는 게 낫겠다."
+
+나도 그런 생각을 해본 적 있다.
+혼자 하는 것이 더 빠르고 편하다.
+
+그런데 그런 순간이 쌓이면 팀은 점점 멀어진다.
+서로를 이해하려 하지 않는 사람이 모인 곳은 팀이라고 부를 수 없다.
+
+서로 먼저 이야기하는 것이, LLM보다 훨씬 효율적이다.

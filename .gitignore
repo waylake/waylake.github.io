@@ -7,4 +7,5 @@ AGENTS.md
 .notes
 *.DS_Store
 node_modules
+_drafts
 llm-wiki

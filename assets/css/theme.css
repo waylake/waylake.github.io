@@ -282,6 +282,17 @@ hr {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
 }
+.post-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.post-back:hover {
+  color: var(--text);
+}
 .post-header-center {
   margin-bottom: 2rem;
   text-align: center;
@@ -333,6 +344,95 @@ hr {
 .prev-post:hover,
 .next-post:hover {
   color: var(--text);
+}
+
+/* ===== Post Footnotes ===== */
+.post-body .footnote {
+  padding: 0 0.15rem;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.post-body .footnote:hover {
+  background: var(--code-bg);
+}
+.post-body .footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.post-body .footnotes ol {
+  padding-left: 1.25rem;
+}
+.post-body .footnotes li {
+  margin: 0.5rem 0;
+}
+.post-body .footnotes p {
+  display: inline;
+  margin: 0;
+}
+.post-body .reversefootnote {
+  margin-left: 0.3rem;
+  text-decoration: none;
+}
+
+/* ===== Post Table of Contents ===== */
+.post-toc {
+  display: none;
+}
+@media (min-width: 1180px) {
+  .post-toc {
+    display: block;
+    position: fixed;
+    top: 8rem;
+    left: calc(50% + (var(--max-width) / 2) + 3rem);
+    width: 200px;
+    max-height: calc(100vh - 10rem);
+    overflow-y: auto;
+  }
+}
+.post-toc-label {
+  margin: 0 0 1rem 0;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.post-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 1px solid var(--border);
+}
+.post-toc li {
+  margin: 0;
+}
+.post-toc a {
+  display: block;
+  padding: 0.4rem 0 0.4rem 1rem;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+.post-toc a:hover {
+  color: var(--text);
+  opacity: 1;
+}
+.post-toc a.active {
+  color: var(--text);
+  border-left-color: var(--text);
+}
+.post-toc li.toc-h3 a {
+  padding-left: 1.75rem;
+  font-size: 0.75rem;
 }
 
 /* ===== Post List (shared by category & subcategory pages) ===== */
@@ -667,7 +767,9 @@ hr {
   background: var(--muted);
   border-radius: 3px;
   opacity: 0.3;
-  transition: background 0.3s ease, opacity 0.3s ease;
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {

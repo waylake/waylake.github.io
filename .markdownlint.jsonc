@@ -3,5 +3,12 @@
   "MD013": false,
   "MD033": false,
   "MD041": false,
-  "globs": ["**/*.md", "!node_modules", "!_site", "!vendor", "!.notes", "!AGENTS.md"]
+  "globs": [
+    "**/*.md",
+    "!**/node_modules/**",
+    "!_site/**",
+    "!vendor/**",
+    "!.opencode/**",
+    "!AGENTS.md"
+  ]
 }

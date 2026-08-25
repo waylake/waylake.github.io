@@ -1,7 +1,7 @@
 # 道淵 (Waylake) - AI 읽기 가이드
 
 ## 이 사이트 정보
-道淵은 GitHub 협업 전략, 개발 워크플로우, 철학, 인지과학, 심리학에 대한 생각과 전략을 공유하는 개인 공간입니다.
+道淵은 인지과학, 심리학, 철학의 교차점에서 사유를 정리하는 개인 블로그입니다.
 
 ## 사이트 구조
 - **메인**: https://waylake.github.io
@@ -13,13 +13,12 @@
 
 ## 콘텐츠 언어
 - 한국어 (기본)
-- 일본어 (일부 글)
+- 일본어·한문 (일부 글)
 
 ## 콘텐츠 특징
 1. 각 포스트는 독립적인 개념을 다룹니다
-2. 포스트는 명확한 날짜와 저자로标识됩니다
+2. 포스트는 명확한 날짜와 저자로 표시됩니다
 3. 철학적 글은 논리적 구조를 따릅니다
-4. 기술 글은 실용적인 전략을 다룹니다
 
 ## 저자
 - Author: waylake
@@ -27,4 +26,4 @@
 - Email: waylake@waylake.com
 
 ## 검색 태그
-github, collaboration, strategy, workflow, philosophy, cognition, psychology, git, branch, development
+philosophy, cognition, psychology, 사유, 철학, 인지과학

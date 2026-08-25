@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "bundle exec jekyll serve --livereload",
     "build": "bundle exec jekyll build",
-    "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules' '#_site' '#vendor' '#.notes' '#AGENTS.md'",
+    "lint:md": "markdownlint-cli2 '**/*.md' '#**/node_modules/**' '#_site/**' '#vendor/**' '#.opencode/**' '#AGENTS.md'",
     "lint:format": "prettier --check '**/*.{md,html,css,yml,yaml,json}'",
     "format": "prettier --write '**/*.{md,html,css,yml,yaml,json}'",
     "lint": "npm run lint:md && npm run lint:format"

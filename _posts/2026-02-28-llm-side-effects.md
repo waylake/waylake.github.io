@@ -2,9 +2,8 @@
 layout: post
 title: "Claude의 부작용"
 date: 2026-02-28 00:00:00 +0900
-author: waylake
+categories: cognition
 tags: [llm, ai, essay]
-lang: ko
 ---
 
 > "Garbage in, garbage out." — 오래된 격언이지만, 요즘은 좀 다른 의미로 다가온다.

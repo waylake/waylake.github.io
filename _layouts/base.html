@@ -21,7 +21,7 @@
       "url": "{{ site.url }}"
     },
     "url": "{{ site.url }}{{ page.url }}",
-    "description": "{{ page.excerpt | strip_html | truncate: 200 }}"
+    "description": "{{ page.excerpt | strip_html | strip_newlines | escape | truncate: 200 }}"
   }
   </script>
   {% endif %}

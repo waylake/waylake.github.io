@@ -7,13 +7,7 @@
   "description": "{{ site.description }}",
   "author": {
     "@type": "Person",
-    "name": "waylake"{% if include.author_url %},
-    "url": "{{ include.author_url }}"{% endif %}
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "{{ site.url }}/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
+    "name": "{{ site.author }}"
   }
 }
 </script>

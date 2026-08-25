@@ -3,13 +3,11 @@ layout: base
 ---
 <article class="page-content">
   <div class="page-body">
-    <div class="philosophy-container">
-      <div class="subcategory-breadcrumb">
-        <a href="{{ "/philosophy" | relative_url }}">哲學</a>
-        <span class="breadcrumb-separator">→</span>
-        <span class="breadcrumb-current">{{ page.title }}</span>
-      </div>
-      {{ content }}
+    <div class="subcategory-breadcrumb">
+      <a href="{{ "/philosophy" | relative_url }}">哲學</a>
+      <span class="breadcrumb-separator">→</span>
+      <span class="breadcrumb-current">{{ page.title }}</span>
     </div>
+    {{ content }}
   </div>
 </article>

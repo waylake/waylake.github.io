@@ -10,14 +10,4 @@
   </div>
   {% endif %}
 
-  {% if include.philosophers %}
-  <div class="zen-philosophers">
-    <p class="zen-philosophers-label">主要哲學者</p>
-    <div class="zen-philosophers-list">
-      {% for philosopher in include.philosophers %}
-      <span class="zen-philosopher">{{ philosopher }}</span>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
 </div>

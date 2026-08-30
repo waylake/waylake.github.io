@@ -8,7 +8,7 @@ philosophers:
   - 러셀
   - 비트겐슈타인
   - 카르납
-  - 퀘이인
+  - 콰인
 ---
 
 {% include subcategory-header.html

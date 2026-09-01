@@ -29,20 +29,9 @@
 <body>
   {% include header.html %}
 
-  <main class="main-content">
+  <main class="main-content{% if page.layout == 'post' %} main-content-post{% endif %}">
     {{ content }}
   </main>
-
-  {% if layout.post_navigation %}
-  <nav class="post-navigation">
-    {% if page.previous.url %}
-      <a href="{{ page.previous.url }}" class="prev-post">← {{ page.previous.title }}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a href="{{ page.next.url }}" class="next-post">{{ page.next.title }} →</a>
-    {% endif %}
-  </nav>
-  {% endif %}
 
   {% include footer.html %}
   {% include theme-toggle.html %}

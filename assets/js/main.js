@@ -70,7 +70,7 @@
   }
 })();
 
-// Post Table of Contents
+// Post Table of Contents (Mounted in Sidebar when available)
 (function () {
   function slugify(text) {
     return text
@@ -81,9 +81,9 @@
   }
 
   function initToc() {
-    var postContent = document.querySelector(".post-content");
     var postBody = document.querySelector(".post-body");
-    if (!postContent || !postBody) return;
+    var targetContainer = document.querySelector(".post-sidebar-sticky") || document.querySelector(".post-content");
+    if (!postBody || !targetContainer) return;
 
     var headings = postBody.querySelectorAll("h2, h3");
     if (headings.length < 2) return;
@@ -112,6 +112,20 @@
       link.textContent = heading.textContent;
       link.dataset.tocTarget = id;
 
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var targetId = this.dataset.tocTarget;
+        var targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (history.pushState) {
+            history.pushState(null, null, "#" + targetId);
+          } else {
+            location.hash = "#" + targetId;
+          }
+        }
+      });
+
       item.appendChild(link);
       list.appendChild(item);
     });
@@ -122,11 +136,11 @@
 
     var label = document.createElement("p");
     label.className = "post-toc-label";
-    label.textContent = "On this page";
+    label.textContent = "목차";
 
     nav.appendChild(label);
     nav.appendChild(list);
-    postContent.appendChild(nav);
+    targetContainer.appendChild(nav);
 
     var links = nav.querySelectorAll("a");
     var observer = new IntersectionObserver(
@@ -141,6 +155,7 @@
             l.classList.remove("active");
           });
           active.classList.add("active");
+          active.scrollIntoView({ block: "nearest", behavior: "smooth" });
         });
       },
       { rootMargin: "-10% 0px -70% 0px" },
@@ -155,5 +170,44 @@
     document.addEventListener("DOMContentLoaded", initToc);
   } else {
     initToc();
+  }
+})();
+
+// Reading Progress Bar
+(function () {
+  function initReadingProgress() {
+    var fill = document.getElementById("reading-progress-fill");
+    if (!fill) return;
+
+    var ticking = false;
+
+    function updateProgress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = 0;
+      if (max > 0) {
+        progress = Math.min(Math.max((window.scrollY / max) * 100, 0), 100);
+      } else {
+        progress = 100;
+      }
+      fill.style.width = progress + "%";
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    updateProgress();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReadingProgress);
+  } else {
+    initReadingProgress();
   }
 })();
